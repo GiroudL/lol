@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<link href="style.css" type="text/css" rel="stylesheet"> 
+<link href="style.css" type="text/css" rel="stylesheet">
+<script src="main.js"></script> 
 <head>
 <title> Google </title>
 <link rel="icon" href="favicon.ico"/>
@@ -12,26 +13,44 @@
 <ul id="haut"> 
 <li><a>Gmail</a></li>
 <li><a>Images</a></li>
+<%= image_tag "menu_gg.png" %>
+<li><a>
+<%= image_tag "cloche.png" %>
+	
+</a></li>
 <input id="connexion" type="button" value="Connexion" href="https://accounts.google.com/signin/v2/sl/pwd?hl=fr&passive=true&continue=https%3A%2F%2Fwww.google.fr%2F%3Fgfe_rd%3Dcr%26ei%3DP8lcWaqyKubS8AeJ0KeIBA%26gws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin"/>
 </ul>
 </nav>
 </header>
 
 <!--recherche  -->
+<div id = 'centre' style="display:none;">
+
+<div class= "logo">
+
+<%= image_tag "googlecolor.png" %>
+<h3 id="France"> France </h3>
+</div>
 
 
 <div class="form">
 <form>
         <label for="form-search"></label>
         <input type="text" id="form-search" placeholder="Recherchez">
-   
+ 
+<%= image_tag "vocale.png" %>
 </form>
 </div>
 
 <div class="vnr">
-<input class="bouton" type="button" value="Recherche Google" href="http://gph.is/1ZKO0QO"/>
-<input class="bouton" type="button" value="J'ai de la chance" href="http://gph.is/1ZKO0QO"/>
+<input class="bouton" onclick="searchGoogle()" type="button" value="Recherchez" href="http://gph.is/1ZKO0QO"/>
+<input class="bouton"  type="button" value="J'ai de la chance"/>
 </div>
+</div>
+<input type="button" value="Afficher" onClick="AfficherMasquer()" />
+
+
+
 
 <!--footer-->
 <footer class="footer">
@@ -49,5 +68,8 @@
 <a href="https://www.google.com/?gfe_rd=cr&ei=rsBcWYXtFevU8gf6npW4Ag&gws_rd=ssl,cr&fg=1">Utiliser Google.com</a>
 </div>
 </footer>
+
+<script type="text/javascript" src="afficher_cacher_div.js"></script>
+
 </body>
 </html>
